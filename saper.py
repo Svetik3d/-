@@ -1,7 +1,8 @@
-#ЗАДАЧА №234 	Сапер
 #!/usr/bin/env python
 # -*-coding: utf-8 -*-
 # vim: sw=4 ts=4 expandtab ai
+
+#ЗАДАЧА №234 	Сапер
 
 import random
 import time
