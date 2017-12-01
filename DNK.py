@@ -12,8 +12,13 @@ s = raw_input("Скажите последовательность - ")
 t = raw_input("Скажите строку - ")
 aki = 0
 n = 0
+ot = []
 
 for b in t:
 	if s[n] == b:
 		n = n+1
-		print "YES"
+		ot.append("YES")
+if len(s) == len(ot):
+	print "YES"
+else:
+	print "NO"
