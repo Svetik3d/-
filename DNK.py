@@ -6,16 +6,10 @@
 with open("/home/sveta/dnk.txt", "r") as files:
 	r = files.read().split("\n")
 	s = r[0]
-	print s
 	t = r[1]
-	print t
-
 n = 0
 
 for b in t:
-	print n
-	print b
-	print s[n]
 	if s[n] == b:
 		n = n+1
 		if n == len(s):
