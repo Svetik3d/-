@@ -3,7 +3,7 @@
 # vim: sw=4 ts=4 expandtab ai
 #ЗАДАЧА №278 	Вычислительная биология
 
-with open("/home/sveta/INPUT.txt", "r") as files:
+with open("INPUT.txt", "r") as files:
 	r = files.read().split("\n")
 	s = r[0]
 	t = r[1]
@@ -15,7 +15,7 @@ for b in t:
 		if n == len(s):
 			break
 
-with open("/home/sveta/OUTPUT.txt", "w") as filess:
+with open("OUTPUT.txt", "w") as filess:
 	if len(s) == n:
 		filess.write("YES")
 	else:
