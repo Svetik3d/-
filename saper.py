@@ -2,6 +2,7 @@
 # -*-coding: utf-8 -*-
 # vim: sw=4 ts=4 expandtab ai
 
+
 li=[]
 
 with open("/home/sveta/saperproga.txt", "r") as files:
@@ -48,5 +49,4 @@ for akb in range(0, len(li)):
 for i in range(len(li)):
 	print "".join(li[i])
 
-# https-acmp.ru
-Задания олимпиадные по программированию №234
+
