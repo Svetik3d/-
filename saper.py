@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*-coding: utf-8 -*-
 # vim: sw=4 ts=4 expandtab ai
 
@@ -21,30 +21,32 @@ with open("INPUT.txt", "r") as files:
 
 def plus(l,ab,am,x,y):
 	if x>=0 and y>=0 and x<len(l) and y < len(l) :
-		if l[ab][am] == "*" and l[x][y] != "*":
+		if  l[x][y] != "*":
 			if l[x][y] == ".":
 				l[x][y] = 0
 			l[x][y]= str(int(l[x][y])+1)
 
 for akb in range(0, len(li)):
 	for akm in range(0, len(li[akb])):
-		#Сверху
-		plus(li,akb,akm,akb-1,akm)
-		#Снизу
-		plus(li,akb,akm,akb+1,akm)
-		#Справа
-		plus(li,akb,akm,akb,akm+1)
-		#Слева
-		plus(li,akb,akm,akb,akm-1)
-		#СнизуСлева
-		plus(li,akb,akm,akb+1,akm-1)
-		#СнизуСправа
-		plus(li,akb,akm,akb+1,akm+1)
-		#СверхуСлева
-		plus(li,akb,akm,akb-1,akm-1)
-		#СверхуСправа
-		plus(li,akb,akm,akb-1,akm+1)
+		if li[akb][akm] == "*":
+			#Сверху
+			plus(li,akb,akm,akb-1,akm)
+			#Снизу
+			plus(li,akb,akm,akb+1,akm)
+			#Справа
+			plus(li,akb,akm,akb,akm+1)
+			#Слева
+			plus(li,akb,akm,akb,akm-1)
+			#СнизуСлева
+			plus(li,akb,akm,akb+1,akm-1)
+			#СнизуСправа
+			plus(li,akb,akm,akb+1,akm+1)
+			#СверхуСлева
+			plus(li,akb,akm,akb-1,akm-1)
+			#СверхуСправа
+			plus(li,akb,akm,akb-1,akm+1)
 
 with open("OUTPUT.txt", "w") as filess:
 	for i in li:
 		filess.write("".join(i)+"\n")
+
