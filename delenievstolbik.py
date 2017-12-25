@@ -12,6 +12,7 @@ n = []
 ch = ""
 ot = ""
 os = ""
+x = 1
 
 with open("OUTPUT.txt", "w") as filess:
 	filess.write(d + "|" + na + "\n")
@@ -26,9 +27,11 @@ with open("OUTPUT.txt", "w") as filess:
 	ch = ""
 	o = int(h) % int(na)
 	ots = str(int(d)/int(na))
-	w = str(str(int(h) - o)+" "+"|"+ "----" + "\n")
+	k = len(d)-len(str(int(h) - o))-2
+	w = str(str(int(h) - o)+" "*k+" "+"|"+ "-"*len(ots) + "\n")
 	filess.write("-" + w)
-	filess.write("----" + str(ots)+"\n")
+	k = len(w) - len(ots)-1
+	filess.write("-"*k+"|" + str(ots)+"\n")
 	d = str(o) + d[len(h):]
 	for i in d:
 		if int(d) == 0:
@@ -48,7 +51,8 @@ with open("OUTPUT.txt", "w") as filess:
 		n = []
 		d = str(os) + d[len(i)-1:]
 	for p, v in ni:
-		filess.write(p+"\n")
-		filess.write("-"+v+"\n")
-		filess.write("---"+ "\n")
-	filess.write("0"+ "\n")
+		filess.write(" "*x+p+"\n")
+		filess.write(" "*x+"-"+v+"\n")
+		filess.write(" "*x+"---"+ "\n")
+		x = x+1
+	filess.write(" "*x+"0"+ "\n")
