@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# -*-coding: utf-8 -*-
+# vim: sw=4 ts=4 expandtab ai
+#ЗАДАЧА № 676 Игра со спичками
+
 with open("INPUT.txt", "r") as files:
     n = int(files.read())
 
