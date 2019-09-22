@@ -1,4 +1,3 @@
-//
 var
     filetext, file_OUT: text;
     s_file, e_s, y_s:string;
